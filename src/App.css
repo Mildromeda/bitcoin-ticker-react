@@ -1,0 +1,88 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: linear-gradient(to right, #2BC0E4, #EAECC6);
+}
+
+.App {
+  text-align: center;
+  list-style-type: none;
+  max-height: 100vh;
+}
+
+.App-header{
+  max-height: 10vh;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.App-header h1{
+  text-transform: uppercase;
+}
+
+.App-header p:nth-child(2){
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+.prices{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 90vh;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.prices h2{
+  margin-bottom: 1rem;
+}
+
+
+.prices>div{
+  flex: 0 0 33%;
+  max-width: 30%;
+  border: 2px solid black;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+
+  .prices{
+    max-width: 90%;
+  }
+  .prices>div{
+    flex: 0 0 calc(50%-2rem);
+    max-width: calc(50%-2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    min-width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .prices{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 100%;
+  }
+
+  .prices>div{
+    flex: 1;
+    min-width: 80%;
+  }
+}
+
+
+
